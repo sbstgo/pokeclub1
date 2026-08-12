@@ -1,0 +1,291 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   PokeClub Studio — Custom Theme CSS
+   Aplicado sobre el tema Horizon de Shopify
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
+
+/* ─── Variables PokeClub ─────────────────────────────────────────────────── */
+:root {
+  --pk-red:        #e63329;
+  --pk-red-hover:  #c0251c;
+  --pk-red-light:  rgba(230, 51, 41, 0.12);
+  --pk-black:      #000000;
+  --pk-card:       #101010;
+  --pk-card2:      #161616;
+  --pk-border:     rgba(255, 255, 255, 0.07);
+  --pk-border-strong: rgba(255, 255, 255, 0.14);
+  --pk-text:       #ffffff;
+  --pk-text-muted: #a1a1aa;
+}
+
+/* ─── Tipografía ─────────────────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--pk-black) !important;
+  color: var(--pk-text) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+  font-weight: 800 !important;
+}
+
+/* ─── Header ─────────────────────────────────────────────────────────────── */
+header,
+.header,
+.header__wrapper,
+sticky-header,
+[data-section-type="header"] {
+  background: rgba(0, 0, 0, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid var(--pk-border) !important;
+}
+
+.header__heading-link,
+.header__heading {
+  color: var(--pk-text) !important;
+}
+
+.header__menu-item,
+.header__menu-item a,
+nav a {
+  color: var(--pk-text-muted) !important;
+  transition: color 0.2s !important;
+}
+
+.header__menu-item:hover a,
+nav a:hover {
+  color: var(--pk-text) !important;
+}
+
+/* ─── Botones principales ────────────────────────────────────────────────── */
+.button,
+.btn,
+button[type="submit"],
+.button--primary,
+[class*="button-primary"] {
+  background: var(--pk-red) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s !important;
+}
+
+.button:hover,
+.btn:hover,
+.button--primary:hover {
+  background: var(--pk-red-hover) !important;
+  box-shadow: 0 0 20px rgba(230, 51, 41, 0.3) !important;
+}
+
+.button:active,
+.btn:active {
+  transform: scale(0.98) !important;
+}
+
+/* ─── Botones secundarios ────────────────────────────────────────────────── */
+.button--secondary,
+[class*="button-secondary"] {
+  background: var(--pk-red-light) !important;
+  color: var(--pk-red) !important;
+  border: 1px solid rgba(230, 51, 41, 0.3) !important;
+  border-radius: 10px !important;
+}
+
+.button--secondary:hover {
+  background: rgba(230, 51, 41, 0.18) !important;
+}
+
+/* ─── Cards de producto ──────────────────────────────────────────────────── */
+.card,
+.product-card,
+[class*="card-wrapper"],
+.card-wrapper {
+  background: var(--pk-card) !important;
+  border: 1px solid var(--pk-border) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.card:hover,
+.product-card:hover,
+.card-wrapper:hover {
+  border-color: var(--pk-border-strong) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.card__information,
+.card-information {
+  background: var(--pk-card) !important;
+  padding: 12px !important;
+}
+
+.card__heading,
+.card-information__text,
+.card__heading a {
+  color: var(--pk-text) !important;
+}
+
+/* ─── Precios ────────────────────────────────────────────────────────────── */
+.price,
+.price__regular,
+.price-item {
+  color: var(--pk-text) !important;
+}
+
+.price--on-sale .price-item--regular {
+  color: var(--pk-text-muted) !important;
+}
+
+.price--on-sale .price-item--sale {
+  color: var(--pk-red) !important;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────────── */
+footer,
+.footer,
+[data-section-type="footer"] {
+  background: #080808 !important;
+  border-top: 1px solid var(--pk-border) !important;
+  color: var(--pk-text-muted) !important;
+}
+
+footer a,
+.footer a {
+  color: var(--pk-text-muted) !important;
+  transition: color 0.2s !important;
+}
+
+footer a:hover,
+.footer a:hover {
+  color: var(--pk-text) !important;
+}
+
+/* ─── Inputs y formularios ───────────────────────────────────────────────── */
+input,
+select,
+textarea,
+.field__input {
+  background: var(--pk-card2) !important;
+  border: 1px solid var(--pk-border-strong) !important;
+  color: var(--pk-text) !important;
+  border-radius: 8px !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.field__input:focus {
+  border-color: var(--pk-red) !important;
+  box-shadow: 0 0 0 3px rgba(230, 51, 41, 0.15) !important;
+  outline: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(161, 161, 170, 0.5) !important;
+}
+
+/* ─── Carrito drawer ─────────────────────────────────────────────────────── */
+cart-drawer,
+.drawer,
+[id*="cart-drawer"] {
+  background: var(--pk-card) !important;
+  border-left: 1px solid var(--pk-border) !important;
+}
+
+.cart-drawer__header {
+  border-bottom: 1px solid var(--pk-border) !important;
+}
+
+/* ─── Badges ─────────────────────────────────────────────────────────────── */
+.badge,
+.badge--sale {
+  background: var(--pk-red) !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  font-size: 10px !important;
+}
+
+.badge--sold-out {
+  background: var(--pk-card2) !important;
+  color: var(--pk-text-muted) !important;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--pk-border-strong);
+  border-radius: 99px;
+}
+
+/* ─── Links generales ────────────────────────────────────────────────────── */
+a { color: var(--pk-text); transition: color 0.2s; }
+a:hover { color: var(--pk-red); }
+
+/* ─── Secciones con fondo ────────────────────────────────────────────────── */
+.section,
+[class*="shopify-section"] {
+  background: var(--pk-black);
+}
+
+/* ─── Anuncio bar ────────────────────────────────────────────────────────── */
+.announcement-bar,
+[data-section-type="announcement-bar"] {
+  background: var(--pk-red) !important;
+  color: #fff !important;
+}
+
+.announcement-bar a {
+  color: #fff !important;
+}
+
+/* ─── Focus accesible ────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--pk-red);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Paginación ─────────────────────────────────────────────────────────── */
+.pagination__item--current,
+.pagination .current {
+  background: var(--pk-red) !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+}
+
+/* ─── Quantity selector ──────────────────────────────────────────────────── */
+.quantity,
+quantity-selector {
+  background: var(--pk-card2) !important;
+  border: 1px solid var(--pk-border-strong) !important;
+  border-radius: 8px !important;
+}
+
+/* ─── Variant buttons ────────────────────────────────────────────────────── */
+.swatch--active,
+[aria-checked="true"].swatch {
+  background: var(--pk-red) !important;
+  border-color: var(--pk-red) !important;
+  color: #fff !important;
+}
+
+/* ─── Responsive adjustments ─────────────────────────────────────────────── */
+@media (max-width: 749px) {
+  h1, .h1 { font-size: 2rem !important; }
+  h2, .h2 { font-size: 1.5rem !important; }
+
+  .card,
+  .card-wrapper {
+    border-radius: 8px !important;
+  }
+}
